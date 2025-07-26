@@ -18,7 +18,7 @@ Generation
 
 
 
-Rag Pipeline
+# Rag Pipeline
 
 
 Indexing is the process of preparing the knowledge base .It has four sub steps
@@ -41,7 +41,7 @@ Generation is the final step where a Large Language Model (LLM) uses the user’
 
 <img width="701" height="541" alt="Rag 3 (2) drawio" src="https://github.com/user-attachments/assets/ec51149d-886c-4bab-86f4-93cbe46354ba" />
 
-Used Tools Libraries and Packages
+# Used Tools Libraries and Packages
 
 A Retrieval Augmented Generation  system for Bangla and English Documents,powered by Google Gemini and Hugging Face Embeddings.
 
@@ -75,7 +75,7 @@ Torch library has been used for GPU acceleration
 
 colab secret manger has been used to securely access google api key stored in colab.
 
-Methods and Challenges
+# Methods and Challenges
 
 I have used pypdf loader from LangChain for text extracting which is fastest for digital PDF and it also preserve basic formatting but it has some limitation ,it may mishandle Bangla conjuncts. 
 
