@@ -78,32 +78,23 @@ colab secret manger has been used to securely access google api key stored in co
 # Methods and Challenges
 
 I have used pypdf loader from LangChain for text extracting which is fastest for digital PDF and it also preserve basic formatting but it has some limitation ,it may mishandle Bangla conjuncts. 
-
 Fall back if pypdf failed,i used alternative pdfminer which is better extracting raw text from complex layouts.Though it is slower than pypdfloader.
 
-Broken encoding was fixed using custom function clean_bangla_text. Invisible characters were stripped during cleaning. Conjunct letters needed manual fixes. Mid-sentence line breaks were handled 
-
-by the RecursiveCharacterTextSplitter with a 200-character overlap to maintain context.
+Broken encoding was fixed using custom function clean_bangla_text. Invisible characters were stripped during cleaning. Conjunct letters needed manual fixes. Mid-sentence line breaks were handled by the RecursiveCharacterTextSplitter with a 200-character overlap to maintain context.
 
 For chunking strategy I used Hybrid chunking strategy.Primary split was paragraph based to acquire complete ideas.Secondary split was sentence based maintaining linguistic boundaries which 
-
 respects the natural structure of languages.Then I used 1000 character chunks with 200 character overlapping. It keeps meaning intact,remember context and fixes and fits bangla style.
 
 paraphrase-multilingual-mpnet-base-v2 from Sentence Transformers (Hugging Face) has been used for embedding.It is specially trained on 100+ languages including high quality Bangla data.It’s 
-
 mpnet architecture is better than bert for sentence meaning. 768 dimensional vectors capture subtle context differences and it also runs on GPU.It’s key advantage is even if the query uses 
-
 different wording the embeddings remains semantically close.
 
 Query and all stored chunks are converted into high dimensional vectors using embedding models and the similarity between  query and stored chunks is computed using cosine similarity, which 
-
 measures the angle between vectors.It works well for high dimensional embeddings. For vector storage I have used FAISS database because it uses highly optimized algorithm for searches rather 
-
 than brute force search.
 
  My embeddng models generate dense vector representation in a share semantic space is optimized for multilingual retrieval.It focuses on cosine similarity(angle based).FAISS retrieval uses 
- 
-maximum mariginal relevance to make balance between diversity and relevancy.If the query is vague it may return irrelevant chunks.
+ maximum mariginal relevance to make balance between diversity and relevancy.If the query is vague it may return irrelevant chunks.
 
 In some cases LLM didn’t generate answer. Using better chunking may improve the result or may be using better models with more parameters will give more accuracy.
 
