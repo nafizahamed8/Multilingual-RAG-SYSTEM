@@ -3,7 +3,8 @@ Develop a Simple Multilingual Retrieval-Augmented Generation (RAG) System
 
 Setup Guide
 Retrieval-Augmented Generation is a way to make LLM smarter by giving extra information at a time.
-Rag based system build in four steps:
+
+Rag based system build in four steps
 Indexing,
 
 Retrieval,
@@ -37,6 +38,26 @@ Augmentation refers to the step where the retrieved documents (chunks of relevan
 Generation is the final step where a Large Language Model (LLM) uses the user’s query and the retrieved & augmented context to generate a response.
 
 <img width="376" height="586" alt="Rag 2 drawio" src="https://github.com/user-attachments/assets/59d4cd5b-a040-406b-a2aa-675e2a528092" />
+
+<img width="701" height="541" alt="Rag 3 (2) drawio" src="https://github.com/user-attachments/assets/ec51149d-886c-4bab-86f4-93cbe46354ba" />
+
+Used Tools Libraries and Packages
+
+A Retrieval Augmented Generation  system for Bangla and English Documents,powered by Google Gemini and Hugging Face Embeddings.
+
+For this project purpose, I used LangChain an open source framework,which is used for developing applications powered by LLM.
+
+LangChain gives  build in functionality for all kind of components which is necessary for my project.
+
+Using LangChain ,you can built conversational chat-bots, AI knowledge assistant,AI agents.
+
+LangChain models are the core interface by which you can interact with AI models.
+
+Chains automatically build one stage output to second stage input. Chain is a concept by which helps you to build pipeline in LangChain.
+
+<img width="441" height="361" alt="LangChain drawio" src="https://github.com/user-attachments/assets/c75bad82-acae-4492-bdd5-3be7031436ad" />
+
+
 
 
 
