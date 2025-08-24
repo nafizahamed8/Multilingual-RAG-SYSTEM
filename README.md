@@ -1,7 +1,9 @@
 # Multilingual-RAG-SYSTEM
+
 Develop a Simple Multilingual Retrieval-Augmented Generation (RAG) System
 
 Setup Guide
+
 Retrieval-Augmented Generation is a way to make LLM smarter by giving extra information at a time.
 
 Rag based system build in four steps
