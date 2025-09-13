@@ -2,18 +2,18 @@
 
 Develop a Simple Multilingual Retrieval-Augmented Generation (RAG) System
 
-Setup Guide
+# Setup Guide
 
 Retrieval-Augmented Generation is a way to make LLM smarter by giving extra information at a time.
 
 Rag based system build in four steps
-Indexing,
+1.Indexing
 
-Retrieval,
+2.Retrieval
 
-Augmentation,
+3.Augmentation
 
-Generation
+4.Generation
 
 <img width="491" height="281" alt="rag drawio" src="https://github.com/user-attachments/assets/5bc786d4-786b-4d7d-aa29-27d62dac912e" />
 
@@ -45,37 +45,14 @@ Generation is the final step where a Large Language Model (LLM) uses the user’
 
 # Used Tools Libraries and Packages
 
-A Retrieval Augmented Generation  system for Bangla and English Documents,powered by Google Gemini and Hugging Face Embeddings.
+A Retrieval Augmented Generation  system for Bangla and English Documents,powered by Google Gemini and Hugging Face Embeddings.For this project purpose, I used LangChain an open source framework,which is used for developing applications powered by LLM.LangChain gives  build in functionality for all kind of components which is necessary for my project.Using LangChain ,you can built conversational chat-bots, AI knowledge assistant,AI agents.
 
-For this project purpose, I used LangChain an open source framework,which is used for developing applications powered by LLM.
-
-LangChain gives  build in functionality for all kind of components which is necessary for my project.
-
-Using LangChain ,you can built conversational chat-bots, AI knowledge assistant,AI agents.
-
-LangChain models are the core interface by which you can interact with AI models.
-
-Chains automatically build one stage output to second stage input. Chain is a concept by which helps you to build pipeline in LangChain.
+LangChain models are the core interface by which you can interact with AI models.Chains automatically build one stage output to second stage input. Chain is a concept by which helps you to build pipeline in LangChain.
 
 <img width="441" height="361" alt="LangChain drawio" src="https://github.com/user-attachments/assets/c75bad82-acae-4492-bdd5-3be7031436ad" />
 
-I used python’s built in functionality os module to work with operating system functionalities like environment variables
-
-Google Gemini AI used for generating responses ,the brain of this project.
-
-HuggingFaceEmbeddings model has been used to convert text into numerical vectors. To understand documents meaning.
-
-PDF Document loader has been used to to read and extract text from PDF files.
-
-FAISS vector-database has been used to store and quickly search through documents embedding
-
-prompt template creator has been used to structure how we talk with AI models
-
-RunnablePassThrough has been used as pipeline connector, to chain different processing steps together.
-
-Torch library has been used for GPU acceleration
-
-colab secret manger has been used to securely access google api key stored in colab.
+I used python’s built in functionality os module to work with operating system functionalities like environment variables.Google Gemini AI used for generating responses ,the brain of this project.HuggingFaceEmbeddings model has been used to convert text into numerical vectors. To understand documents meaning.PDF Document loader has been used to to read and extract text from PDF files.FAISS vector-database has been used to store and quickly search through documents embedding.prompt template creator has been used to structure how we talk with AI models.RunnablePassThrough has been used as pipeline connector, to chain different processing steps together.Torch library has been used for GPU acceleration
+Colab secret manger has been used to securely access google api key stored in colab.
 
 # Methods and Challenges
 
